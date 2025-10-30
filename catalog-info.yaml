@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: test-sjm-tpa-python8-gitops
+  description: This is GitOps manifest for test-sjm-tpa-python8   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=test-sjm-tpa-python8
+    backstage.io/kubernetes-id: test-sjm-tpa-python8 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: test-sjm-tpa-python8
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:test-sjm-tpa-python8

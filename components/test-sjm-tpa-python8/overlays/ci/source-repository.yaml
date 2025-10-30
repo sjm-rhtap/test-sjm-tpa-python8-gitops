@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: test-sjm-tpa-python8-repository
+spec:
+  url: https://github.com/sjm-rhtap/test-sjm-tpa-python8
